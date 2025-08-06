@@ -1,0 +1,57 @@
+.header-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  align-self: stretch; /* Make header container take full width of the flex parent */
+}
+
+.header-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+  padding-bottom: 0.2rem;
+}
+
+.header-stripe {
+  width: 60px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--stripe-color);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Pulse effect only on hover */
+.header-container:hover .header-stripe::before {
+  animation: stripe-pulse 2s linear infinite;
+}
+
+.header-stripe::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 33%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 66%
+  );
+  background-size: 300% 100%;
+  pointer-events: none;
+  opacity: 0.5;
+  background-position: right; /* Reset for smooth start */
+}
+
+@keyframes stripe-pulse {
+  0% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+}

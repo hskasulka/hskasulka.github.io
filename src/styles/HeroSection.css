@@ -1,0 +1,113 @@
+.hero-section {
+  position: relative;
+  width: 100vw; /* full viewport width */
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: white !important;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  min-height: 60vh;
+  overflow: hidden;
+}
+
+.hero-background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-text-container {
+  max-width: 800px;
+  padding: 0 24px;
+  z-index: 1;
+  position: relative;
+  color: white !important;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white !important;
+}
+
+.highlight-name {
+  color: #1890ff;
+}
+
+.hero-tagline {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: white !important;
+}
+
+.tag.web {
+  color: #1890ff;
+}
+
+.tag.mech {
+  color: #52c41a;
+}
+
+.tag.photo {
+  color: #eb2f96;
+}
+
+/* Button styles */
+
+.hero-text-container .ant-btn-link {
+  color: white !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  overflow: visible; /* allow underline to show */
+}
+
+/* Text inside buttons gets underline animation */
+.hero-text-container .ant-btn-link .btn-text {
+  position: relative;
+  padding-bottom: 4px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.hero-text-container .ant-btn-link .btn-text::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: white;
+  transition: width 0.3s ease;
+  pointer-events: none;
+}
+
+.hero-text-container .ant-btn-link:hover .btn-text::after,
+.hero-text-container .ant-btn-link:focus .btn-text::after {
+  width: 100%;
+}
+
+/* Icon grow animation */
+.hero-text-container .ant-btn-link .fa-icon {
+  transition: transform 0.3s ease;
+  display: inline-block;
+  transform-origin: center center;
+  transform: scale(1);
+}
+
+.hero-text-container .ant-btn-link:hover .fa-icon {
+  transform: scale(var(--icon-grow-scale, 1.2));
+}

@@ -1,0 +1,16 @@
+.content-block-container {
+  position: relative;
+  width: 100vw; /* take up full viewport width */
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  box-sizing: border-box;
+}
+
+.content-block-column {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+}
