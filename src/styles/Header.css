@@ -2,14 +2,14 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-
-  align-self: stretch; /* Make header container take full width of the flex parent */
+  align-items: flex-start; /* Always align left */
+  text-align: left; /* Ensure text is left-aligned */
+  align-self: stretch;
 }
 
 .header-title {
-  font-size: 1.8rem;
-  font-weight: bold;
+  font-size: 1.4rem; /* Smaller font size */
+  font-weight: 400;  /* Remove boldness */
   margin: 0;
   padding-bottom: 0.2rem;
 }
@@ -44,14 +44,10 @@
   background-size: 300% 100%;
   pointer-events: none;
   opacity: 0.5;
-  background-position: right; /* Reset for smooth start */
+  background-position: right;
 }
 
 @keyframes stripe-pulse {
-  0% {
-    background-position: right;
-  }
-  100% {
-    background-position: left;
-  }
+  0% { background-position: right; }
+  100% { background-position: left; }
 }

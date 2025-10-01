@@ -41,14 +41,3 @@ const ContentBlock: React.FC<ContentBlockProps> = ({
 };
 
 export default ContentBlock;
-
-
-/* USAGE EXAMPLE
-    <ContentBlock
-    verticalMargin={60}
-    horizontalMargin={80}
-    padding={32}
-    >
-    {[<Component1 />, <Component2 />, <Component3 />]}
-    </ContentBlock>
-*/

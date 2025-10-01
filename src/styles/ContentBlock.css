@@ -14,3 +14,8 @@
   align-items: flex-start;
   height: 100%;
 }
+
+/* NEW: Make all direct children of the column fill the width */
+.content-block-column > * {
+  width: 100%;
+}
