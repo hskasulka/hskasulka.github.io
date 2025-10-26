@@ -1,12 +1,18 @@
 
 import type { ThemeConfig } from 'antd';
 
+const albertSansStack =
+  `'Albert Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif`;
+
 const theme: ThemeConfig = {
+  cssVar: true,
   token: {
     colorPrimary: '#1890ff',      // main blue
     colorLink: '#1890ff',         // link color
-    colorTextBase: '#111111',     // base text
-    fontFamily: `'Inter', sans-serif`,
+    colorTextBase: '#2a2a2aff',     // base text
+    colorError: '#eb2f38ff',
+    colorSuccess: '#52c41a',
+    fontFamily: albertSansStack,
     borderRadius: 6,
   },
   components: {
@@ -16,7 +22,8 @@ const theme: ThemeConfig = {
       fontWeight: 600,
     },
     Typography: {
-      colorTextHeading: '#141414',
+      colorTextHeading: '#2f2f34ff',
+      colorTextBase: '#2a2a2aff',
       fontFamily: `'Inter', sans-serif`,
     },
   },

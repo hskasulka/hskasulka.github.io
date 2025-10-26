@@ -12,6 +12,7 @@
   font-weight: 400;  /* Remove boldness */
   margin: 0;
   padding-bottom: 0.2rem;
+  color: var(--ant-color-text-heading);
 }
 
 .header-stripe {

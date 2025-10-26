@@ -52,16 +52,19 @@
   color: white !important;
 }
 
-.tag.web {
-  color: #1890ff;
-}
-
 .tag.mech {
-  color: #52c41a;
+  color: var(--ant-color-primary);
+  font-weight: bold;
 }
 
-.tag.photo {
-  color: #eb2f96;
+.tag.stanford {
+  color: var(--ant-color-error);
+  font-weight: bold;
+}
+
+.tag.human {
+  color: var(--ant-color-success);
+  font-weight: bold;
 }
 
 /* Button styles */

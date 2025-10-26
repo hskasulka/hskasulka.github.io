@@ -1,46 +1,84 @@
 import { useState } from 'react'
+import { theme } from 'antd'
 import './App.css'
 
 import HeroSection from './layouts/HeroSection'
 import ContentBlock from './layouts/ContentBlock'
 import Header from './components/Header'
 import ExperienceEntry from './components/ExperienceEntry'
+import ProjectCard from './components/ProjectCard'
 
 import {Button} from 'antd';
+import {Typography} from 'antd'
+const {Text} = Typography;
 
-import soe from '@assets/soe.jpg';
+import soe from '@assets/soe_jpg.jpg';
+import vm from '@assets/vm_png.png';
+import stanford from '@assets/stanford_png.png'
+import norwich from '@assets/norwich_png.png'
+import background from '@assets/herobackground.png';
 
 function App() {
   const [count, setCount] = useState(0)
-
+  const { token } = theme.useToken();
   return (
     <>
       <HeroSection/>
       <Button type='primary'>Test</Button>
       <ContentBlock
         verticalMargin={60}
-        horizontalMargin={20}
+        horizontalMargin={100}
         padding={32}>
         {[
           <div>
-            <Header title='Test' stripeColor='#E94E77'></Header>
+            <Header title='About Me' stripeColor={token.colorPrimary}></Header>
+            <Text style={{textAlign: 'left', display: 'block'}}>I’m an engineer, maker, and problem-solver passionate about designing technology that improves lives. At Stanford, I study Mechanical Engineering and Electrical Engineering and have extensive experience in robotics, product design, and manufacturing. I’m interested in using my background to drive innovation in human-centered robotics and MedTech—areas I’ve been able to explore through the Stanford Biodesign Center and my research in additive manufacturing with the Larson Lab.
+            I’m a maker at heart—always working on new side projects—and I’m passionate about helping others bring their ideas to life. I also love the outdoors: I’m a leader in the Trip Leader community, the resident assistant for the Outdoor House, and can usually be found outside camping, backpacking, mountaineering, running or more!
+            </Text>
           </div>,
           <div>
-            <Header title='Larger' stripeColor='#1890ff'></Header>
+            <Header title='Featured Experience' stripeColor={token.colorSuccess}></Header>
+            <ExperienceEntry
+              imageUrl={soe}
+              title="Undergraduate Researcher · The Larson Lab"
+              subtext="Mar 2025 - Present · Stanford Department of Mechanical Engineering"
+            >
+            </ExperienceEntry>
+            <ExperienceEntry
+              imageUrl={vm}
+              title="IT Development Intern"
+              subtext="Jun 2023 - Aug 2023 · Vermont Mutual Insurance Group"
+            >
+            </ExperienceEntry>
+            <ExperienceEntry
+              imageUrl={stanford}
+              title="Resident Assistant"
+              subtext="Sep 2025 - Present · Stanford University"
+            >
+            </ExperienceEntry>
           </div>,
-          
-          <Header title='Much Longer Title' stripeColor='#52c41a'></Header>,
+          <div>
+            <Header title='Education' stripeColor={token.colorError}></Header>
+            <ExperienceEntry
+              imageUrl={stanford}
+              title="Stanford University"
+              subtext="2023 - Present · B.S. Mechanical Engineering, Min. Electrical Engineering"
+            >
+            </ExperienceEntry>
+            <ExperienceEntry
+              imageUrl={norwich}
+              title="Norwich University"
+              subtext="2022 - 2023 · Vermont Early College Program"
+            >
+            </ExperienceEntry>
+          </div>
         ]}
         </ContentBlock>
-        <ExperienceEntry
-              imageUrl={soe}
-              title="Crux Product Design"
-              subtext="Mechanical Engineer · 2022 – present"
-            >
-              <p>· Developed mechanical concepts for machining and injection moulding using Solidworks</p>
-              <p>· Utilised ABAQUS CAE for finite element analysis of mechanical parts</p>
-              <p>· Evaluated device concept feasibility through rapid prototyping and lab testing</p>
-            </ExperienceEntry>
+        
+        <ProjectCard
+          imageUrl={background}
+          title="Test Project"
+          description="This is a really cool project that I worked really hard on and you should click on it to learn more!"/>
     </>
   )
 }

@@ -36,3 +36,15 @@ const ExperienceEntry: React.FC<ExperienceEntryProps> = ({
 };
 
 export default ExperienceEntry;
+
+/*
+            <ExperienceEntry
+              imageUrl={soe}
+              title="Crux Product Design"
+              subtext="Mechanical Engineer · 2022 – present"
+            >
+              <p>· Developed mechanical concepts for machining and injection moulding using Solidworks</p>
+              <p>· Utilised ABAQUS CAE for finite element analysis of mechanical parts</p>
+              <p>· Evaluated device concept feasibility through rapid prototyping and lab testing</p>
+            </ExperienceEntry>
+*/

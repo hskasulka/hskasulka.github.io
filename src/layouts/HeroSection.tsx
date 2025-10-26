@@ -47,13 +47,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         align="start"
       >
         <Title level={1} className="hero-title">
-          Hi there, I'm <span className="highlight-name">Henry</span> 👋
+          Hi there, I'm <span className="highlight-name">Henry</span> 👋🏻
         </Title>
-
         <Text className="hero-tagline">
-          I am a <span className="tag web">web developer</span>,{' '}
-          <span className="tag mech">mechanical engineer</span>, and a{' '}
-          <span className="tag photo">photography enthusiast</span>.
+          I am a <span className="tag mech">mechanical engineer</span>{' '}
+          at <span className="tag stanford">Stanford</span> 
+          , passionate about building innovative <span className="tag human">human-centered</span> solutions
         </Text>
 
         <Space size="large" style={{ marginTop: 20 }}>
