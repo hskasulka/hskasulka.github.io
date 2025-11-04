@@ -1,6 +1,6 @@
 .hero-section {
   position: relative;
-  width: 100vw; /* full viewport width */
+  width: 100vw;
   left: 50%;
   right: 50%;
   margin-left: -50vw;
@@ -20,19 +20,43 @@
 
 .hero-background-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   pointer-events: none;
   z-index: 0;
 }
 
-.hero-text-container {
-  max-width: 800px;
-  padding: 0 24px;
+/* New content wrapper for layout */
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem; /* space between image and text */
   z-index: 1;
   position: relative;
+  flex-wrap: wrap; /* ensures responsiveness on smaller screens */
+}
+
+/* Circular image */
+.hero-image-wrapper {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-profile-image {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Text container */
+.hero-text-container {
+  max-width: 700px;
+  padding: 0 24px;
   color: white !important;
 }
 
@@ -43,7 +67,7 @@
 }
 
 .highlight-name {
-  color: #1890ff;
+  color: var(--ant-color-info);
 }
 
 .hero-tagline {
@@ -67,18 +91,16 @@
   font-weight: bold;
 }
 
-/* Button styles */
-
+/* Buttons */
 .hero-text-container .ant-btn-link {
   color: white !important;
   display: flex;
   align-items: center;
   gap: 8px;
   position: relative;
-  overflow: visible; /* allow underline to show */
+  overflow: visible;
 }
 
-/* Text inside buttons gets underline animation */
 .hero-text-container .ant-btn-link .btn-text {
   position: relative;
   padding-bottom: 4px;
@@ -95,22 +117,30 @@
   width: 0%;
   background-color: white;
   transition: width 0.3s ease;
-  pointer-events: none;
 }
 
-.hero-text-container .ant-btn-link:hover .btn-text::after,
-.hero-text-container .ant-btn-link:focus .btn-text::after {
+.hero-text-container .ant-btn-link:hover .btn-text::after {
   width: 100%;
 }
 
-/* Icon grow animation */
 .hero-text-container .ant-btn-link .fa-icon {
   transition: transform 0.3s ease;
-  display: inline-block;
-  transform-origin: center center;
-  transform: scale(1);
 }
 
 .hero-text-container .ant-btn-link:hover .fa-icon {
   transform: scale(var(--icon-grow-scale, 1.2));
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .hero-text-container {
+    align-items: center;
+    text-align: center;
+  }
 }

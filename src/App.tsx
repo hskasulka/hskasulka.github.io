@@ -10,7 +10,7 @@ import ProjectCard from './components/ProjectCard'
 
 import {Button} from 'antd';
 import {Typography} from 'antd'
-const {Text} = Typography;
+const {Text, Title} = Typography;
 
 import soe from '@assets/soe_jpg.jpg';
 import vm from '@assets/vm_png.png';
@@ -24,7 +24,6 @@ function App() {
   return (
     <>
       <HeroSection/>
-      <Button type='primary'>Test</Button>
       <ContentBlock
         verticalMargin={60}
         horizontalMargin={100}
@@ -32,8 +31,10 @@ function App() {
         {[
           <div>
             <Header title='About Me' stripeColor={token.colorPrimary}></Header>
-            <Text style={{textAlign: 'left', display: 'block'}}>I’m an engineer, maker, and problem-solver passionate about designing technology that improves lives. At Stanford, I study Mechanical Engineering and Electrical Engineering and have extensive experience in robotics, product design, and manufacturing. I’m interested in using my background to drive innovation in human-centered robotics and MedTech—areas I’ve been able to explore through the Stanford Biodesign Center and my research in additive manufacturing with the Larson Lab.
-            I’m a maker at heart—always working on new side projects—and I’m passionate about helping others bring their ideas to life. I also love the outdoors: I’m a leader in the Trip Leader community, the resident assistant for the Outdoor House, and can usually be found outside camping, backpacking, mountaineering, running or more!
+            <Text style={{textAlign: 'left', display: 'block'}}>
+              I’m an engineer, maker, and problem-solver passionate about designing technology that improves lives. At Stanford, I study Mechanical Engineering and Electrical Engineering and have extensive experience in robotics, product design, and manufacturing. I’m interested in using my background to drive innovation in human-centered robotics and MedTech. These are areas I’ve been able to explore through the Stanford Biodesign Center and my research in additive manufacturing with the Larson Lab.
+
+              I’m a maker at heart; always working on new side projects, and I’m passionate about helping others bring their ideas to life. I also love the outdoors: I’m a leader in the Trip Leader community, the resident assistant for the Outdoor House, and can usually be found outside camping, backpacking, mountaineering, running or more!
             </Text>
           </div>,
           <div>
@@ -74,12 +75,37 @@ function App() {
           </div>
         ]}
         </ContentBlock>
+        <Title level={4}>Projects</Title>
+        <div style={{padding: "20px"}}>
+          <ProjectCard
+                imageUrl={background}
+                title="Daft Punk Helmets"
+                description="This is a really cool project that I worked really hard on and you should click on it to learn more!"/>
+              <ProjectCard
+                imageUrl={background}
+                title="Microfluidic Nozzles"
+                description="This is a really cool project that I worked really hard on and you should click on it to learn more!"/>
+              <ProjectCard
+                imageUrl={background}
+                title="Generative Design Drone"
+                description="This is a really cool project that I worked really hard on and you should click on it to learn more!"/>
+        </div>
+        <div>
+          <ProjectCard
+                imageUrl={background}
+                title="Camp Grill"
+                description="This is a really cool project that I worked really hard on and you should click on it to learn more!"/>
+              <ProjectCard
+                imageUrl={background}
+                title="Model of the Heavens"
+                description="This is a really cool project that I worked really hard on and you should click on it to learn more!"/>
+              <ProjectCard
+                imageUrl={background}
+                title="Differential Swerve"
+                description="This is a really cool project that I worked really hard on and you should click on it to learn more!"/>
+        </div>
+      </>
         
-        <ProjectCard
-          imageUrl={background}
-          title="Test Project"
-          description="This is a really cool project that I worked really hard on and you should click on it to learn more!"/>
-    </>
   )
 }
 

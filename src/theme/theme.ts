@@ -7,11 +7,11 @@ const albertSansStack =
 const theme: ThemeConfig = {
   cssVar: true,
   token: {
-    colorPrimary: '#1890ff',      // main blue
+    colorPrimary: '#52a8feff',      // main blue
     colorLink: '#1890ff',         // link color
     colorTextBase: '#2a2a2aff',     // base text
-    colorError: '#eb2f38ff',
-    colorSuccess: '#52c41a',
+    colorError: '#fe525bff',
+    colorSuccess: '#52fe80ff',
     fontFamily: albertSansStack,
     borderRadius: 6,
   },

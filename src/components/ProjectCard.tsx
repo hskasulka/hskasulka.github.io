@@ -37,6 +37,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         width,
         height,
         borderRadius,
+        padding: "20px"
       }}
     >
       <div
