@@ -70,7 +70,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             ghost
             size="middle"
           >
-            View
+            Coming Soon
           </Button>
         </div>
       </div>

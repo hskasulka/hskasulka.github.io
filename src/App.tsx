@@ -18,6 +18,13 @@ import stanford from '@assets/stanford_png.png'
 import norwich from '@assets/norwich_png.png'
 import background from '@assets/herobackground.png';
 
+import daftpunk from '@assets/daftpunk.jpg';
+import nozzle from '@assets/nozzle.jpg';
+import campgrill from '@assets/campgrill.png';
+import generativefpv from '@assets/generativefpv.png';
+import planets from '@assets/planets.png';
+import diffswerve from '@assets/diffswerve.png';
+
 function App() {
   const [count, setCount] = useState(0)
   const { token } = theme.useToken();
@@ -78,31 +85,31 @@ function App() {
         <Title level={4}>Projects</Title>
         <div style={{padding: "20px"}}>
           <ProjectCard
-                imageUrl={background}
+                imageUrl={daftpunk}
                 title="Daft Punk Helmets"
-                description="This is a really cool project that I worked really hard on and you should click on it to learn more!"/>
+                description="3D printed helmets, primed and sanded to a mirror finish with Arduino intergration"/>
               <ProjectCard
-                imageUrl={background}
+                imageUrl={nozzle}
                 title="Microfluidic Nozzles"
-                description="This is a really cool project that I worked really hard on and you should click on it to learn more!"/>
+                description="Using SLA printing to create microfluidic devices for bioprinting"/>
               <ProjectCard
-                imageUrl={background}
-                title="Generative Design Drone"
-                description="This is a really cool project that I worked really hard on and you should click on it to learn more!"/>
+                imageUrl={generativefpv}
+                title="Generative FPV Drone"
+                description="Experimenting with Fusion's Generative Desing to create a custom drone chassis"/>
         </div>
         <div>
           <ProjectCard
-                imageUrl={background}
+                imageUrl={campgrill}
                 title="Camp Grill"
-                description="This is a really cool project that I worked really hard on and you should click on it to learn more!"/>
+                description="Designing, prototyping, and using manual machining to mill and turn a portable Camp Grill"/>
               <ProjectCard
-                imageUrl={background}
+                imageUrl={planets}
                 title="Model of the Heavens"
-                description="This is a really cool project that I worked really hard on and you should click on it to learn more!"/>
+                description="Understanding and combining mechanisms to create a complex, moving model of the solar system"/>
               <ProjectCard
-                imageUrl={background}
+                imageUrl={diffswerve}
                 title="Differential Swerve"
-                description="This is a really cool project that I worked really hard on and you should click on it to learn more!"/>
+                description="Making custom differentials to create slipless, strafing movement for robotics"/>
         </div>
       </>
         
