@@ -1,0 +1,53 @@
+.link-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  text-decoration: none !important;
+  font-size: 1.1rem;          /* same as header text size */
+  font-weight: 500;
+  padding: 2px 0;
+  cursor: pointer;
+  transition: color 0.25s ease;
+}
+
+.link-item .btn-text {
+  position: relative;
+  padding-bottom: 3px;
+  display: inline-block;
+  color: inherit;
+}
+
+/* Underline animation (hover region limited to text+icon only) */
+.link-item .btn-text::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: var(--link-color, #000000);
+  transition: width 0.3s ease;
+  pointer-events: none;
+}
+
+.link-item:hover .btn-text::after {
+  width: 100%;
+}
+
+/* Icon hover grow effect */
+.link-item .fa-icon {
+  transition: transform 0.3s ease;
+  transform-origin: center center;
+  transform: scale(1);
+  font-size: 1.2em;
+}
+
+.link-item:hover .fa-icon {
+  transform: scale(var(--icon-grow-scale, 1.2));
+}
+
+/* Adjust hover color brightness */
+.link-item:hover {
+  color: rgba(0, 0, 0, 0.75);
+}

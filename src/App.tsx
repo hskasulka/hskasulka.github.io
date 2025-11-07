@@ -87,29 +87,36 @@ function App() {
           <ProjectCard
                 imageUrl={daftpunk}
                 title="Daft Punk Helmets"
-                description="3D printed helmets, primed and sanded to a mirror finish with Arduino intergration"/>
+                description="3D printed helmets, primed and sanded to a mirror finish with Arduino intergration"
+                buttonText="Coming Soon"/>
+                
               <ProjectCard
                 imageUrl={nozzle}
                 title="Microfluidic Nozzles"
-                description="Using SLA printing to create microfluidic devices for bioprinting"/>
+                description="Using SLA printing to create microfluidic devices for bioprinting"
+                buttonText="Coming Soon"/>
               <ProjectCard
                 imageUrl={generativefpv}
                 title="Generative FPV Drone"
-                description="Experimenting with Fusion's Generative Desing to create a custom drone chassis"/>
+                description="Experimenting with Fusion's Generative Desing to create a custom drone chassis"
+                link="/projects/generative-design-drone"/>
         </div>
         <div>
           <ProjectCard
                 imageUrl={campgrill}
                 title="Camp Grill"
-                description="Designing, prototyping, and using manual machining to mill and turn a portable Camp Grill"/>
+                description="Designing, prototyping, and using manual machining to mill and turn a portable Camp Grill"
+                buttonText="Coming Soon"/>
               <ProjectCard
                 imageUrl={planets}
                 title="Model of the Heavens"
-                description="Understanding and combining mechanisms to create a complex, moving model of the solar system"/>
+                description="Understanding and combining mechanisms to create a complex, moving model of the solar system"
+                buttonText="Coming Soon"/>
               <ProjectCard
                 imageUrl={diffswerve}
                 title="Differential Swerve"
-                description="Making custom differentials to create slipless, strafing movement for robotics"/>
+                description="Making custom differentials to create slipless, strafing movement for robotics"
+                buttonText="Coming Soon"/>
         </div>
       </>
         

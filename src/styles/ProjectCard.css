@@ -15,6 +15,7 @@
   cursor: pointer;
   display: inline-flex;
   align-items: center;
+  margin: 20px;
   
   --title-shift: 0px; /* vertical slide of the title on hover */
   transition: box-shadow var(--anim-dur) ease;

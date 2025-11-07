@@ -1,0 +1,92 @@
+/* ===== Page Layout ===== */
+.project-section {
+  padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ===== Shared Text Styling ===== */
+.project-text {
+  font-size: 1.25rem;           /* slightly larger for readability */
+  line-height: 1.9;
+  max-width: 850px;
+  text-align: center;
+  color: var(--ant-color-text);
+  margin-bottom: 1.2rem;
+}
+
+/* ===== Shared Image Styling ===== */
+.project-image {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  margin: 0 auto;
+  display: block;
+}
+
+/* ===== Two-column rows (ContentBlock) ===== */
+.content-block-container .ant-row {
+  align-items: center; /* vertical centering in the row */
+}
+
+.content-block-container .ant-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical centering within each column */
+  align-items: center;
+  text-align: center;
+}
+
+/* bring text edges in slightly when paired with an image */
+.content-block-container .project-text {
+  font-size: 1.25rem;
+  line-height: 1.9;
+  color: var(--ant-color-text);
+  text-align: center;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+/* ===== Image-only row at the bottom ===== */
+.project-section.image-only {
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+
+.project-image-only {
+  max-width: 900px;      /* larger hero-style image */
+  border-radius: 12px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 992px) {
+  .project-text {
+    font-size: 1.1rem;
+    max-width: 90%;
+  }
+  .project-image {
+    max-width: 90%;
+    margin-bottom: 1.5rem;
+  }
+  .project-image-only {
+    max-width: 95%;
+  }
+}
+
+.project-pdf-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;             /* ensures responsive wrapping */
+  gap: 1.5rem;                 /* spacing between links */
+  margin: 0 0 100px 0;      /* top and bottom margin */
+}
+
+.project-pdf-links .link-item {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: var(--ant-color-text);
+}

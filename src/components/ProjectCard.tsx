@@ -1,25 +1,22 @@
 import React from 'react';
 import { Typography, Button } from 'antd';
 import '../styles/ProjectCard.css';
+import {Link} from 'react-router-dom';
 
 const { Title, Paragraph } = Typography;
 
 interface ProjectCardProps {
-  /** Background image URL */
   imageUrl: string;
-  /** Project title text */
   title: string;
-  /** Project short description (1–2 sentences) */
   description?: string;
-  /** Width of the card (default: 320px) */
   width?: string;
-  /** Height of the card (default: 200px) */
   height?: string;
-  /** Overlay darkness (0–1, default: 0.4) */
   darkOverlay?: number;
-  /** Corner radius (default: 12px) */
   borderRadius?: number;
+  buttonText?: string;
+  link?: string;
 }
+
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
   imageUrl,
@@ -29,6 +26,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   height = '200px',
   darkOverlay = 0.4,
   borderRadius = 12,
+  buttonText = 'View',
+  link,
 }) => {
   return (
     <div
@@ -37,7 +36,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         width,
         height,
         borderRadius,
-        padding: "20px"
       }}
     >
       <div
@@ -64,14 +62,20 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               {description}
             </Paragraph>
           )}
-          <Button
-            className="project-card-button"
-            type="default"
-            ghost
-            size="middle"
-          >
-            Coming Soon
-          </Button>
+          <Link to={link ?? '#'} style={{textDecoration: 'none'}}>
+            <Button
+              className="project-card-button"
+              type="default"
+              ghost
+              size="middle"
+              href={link}
+              target={link ? "_blank" : undefined}
+              disabled={!link}
+            >
+              {buttonText}
+            </Button>
+          </Link>
+          
         </div>
       </div>
     </div>
