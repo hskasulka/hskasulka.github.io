@@ -8,6 +8,7 @@ import theme from './theme/theme';
 import 'antd/dist/reset.css'; // resets Ant default styles
 
 import GenerativeDrone from '@pages/GenerativeDrone';
+import CampGrill from '@pages/CampGrill';
 
 
 
@@ -18,6 +19,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Routes>
           <Route path="/" element={<App/>}/>
           <Route path="/projects/generative-design-drone" element={<GenerativeDrone/>}/>
+          <Route path="/projects/camp-grill" element={<CampGrill/>}/>
         </Routes>
       </Router>
     </ConfigProvider>

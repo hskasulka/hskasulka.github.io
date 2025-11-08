@@ -106,7 +106,7 @@ function App() {
                 imageUrl={campgrill}
                 title="Camp Grill"
                 description="Designing, prototyping, and using manual machining to mill and turn a portable Camp Grill"
-                buttonText="Coming Soon"/>
+                link="/projects/camp-grill"/>
               <ProjectCard
                 imageUrl={planets}
                 title="Model of the Heavens"

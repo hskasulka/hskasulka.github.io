@@ -35,7 +35,7 @@ const GenerativeDrone: React.FC = () => {
       <ContentBlock>
         <Image
           src={gdd1}
-          alt="Initial inspiration and components"
+          alt="Initial drone inspiration and AM advantages"
           preview={false}
           className="project-image"
         />
@@ -50,7 +50,7 @@ const GenerativeDrone: React.FC = () => {
         </Paragraph>
         <Image
           src={gdd2}
-          alt="Preserve/obstacle planning and load cases"
+          alt="Sketched notes for drone load cases"
           preview={false}
           className="project-image"
         />
@@ -59,7 +59,7 @@ const GenerativeDrone: React.FC = () => {
       <ContentBlock>
         <Image
           src={gdd3}
-          alt="Fusion 360 generative setup"
+          alt="Fusion 360 generative design setup"
           preview={false}
           className="project-image"
         />
@@ -74,7 +74,7 @@ const GenerativeDrone: React.FC = () => {
         </Paragraph>
         <Image
           src={gdd4}
-          alt="Iteration and testing"
+          alt="Simulation results on the generated body"
           preview={false}
           className="project-image"
         />
@@ -89,7 +89,7 @@ const GenerativeDrone: React.FC = () => {
       <div className="project-section image-only">
         <Image
           src={gdd5}
-          alt="Final generative drone frame"
+          alt="Final generative design drone"
           preview={false}
           className="project-image project-image-only"
         />
@@ -114,7 +114,7 @@ const GenerativeDrone: React.FC = () => {
           <LinkItem
             href="https://drive.google.com/file/d/1n71ibnaYScw6SJKWxeJEBkjtaMSYL9Mt/view?usp=sharing"
             icon={faFilePdf}
-            label="Projct 2"
+            label="Project 2"
           />
           <LinkItem
             href="https://drive.google.com/file/d/1WcuWNWPEr_lDyWMV2q6WF8kD47wjneM0/view?usp=sharing"
