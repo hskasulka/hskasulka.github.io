@@ -94,7 +94,7 @@ function App() {
                 imageUrl={nozzle}
                 title="Microfluidic Nozzles"
                 description="Using SLA printing to create microfluidic devices for bioprinting"
-                buttonText="Coming Soon"/>
+                link="/projects/microfluidic-nozzles"/>
               <ProjectCard
                 imageUrl={generativefpv}
                 title="Generative FPV Drone"

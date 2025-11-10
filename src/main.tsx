@@ -9,6 +9,7 @@ import App from './App';
 import theme from './theme/theme';
 import 'antd/dist/reset.css'; // resets Ant default styles
 
+import MicrofluidicNozzles from '@pages/MicrofluidicNozzles';
 import GenerativeDrone from '@pages/GenerativeDrone';
 import CampGrill from '@pages/CampGrill';
 import ModelOfTheHeavens from '@pages/ModelOfTheHeavens';
@@ -22,6 +23,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <ToTop/>
         <Routes>
           <Route path="/" element={<App/>}/>
+          <Route path="/projects/microfluidic-nozzles" element={<MicrofluidicNozzles/>}/>
           <Route path="/projects/generative-design-drone" element={<GenerativeDrone/>}/>
           <Route path="/projects/camp-grill" element={<CampGrill/>}/>
           <Route path="/projects/model-of-the-heavens" element={<ModelOfTheHeavens/>}/>
