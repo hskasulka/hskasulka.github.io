@@ -84,7 +84,7 @@ function App() {
         </ContentBlock>
         <Title level={4}>Projects</Title>
         <div style={{padding: "20px"}}>
-          <ProjectCard
+               <ProjectCard
                 imageUrl={daftpunk}
                 title="Daft Punk Helmets"
                 description="3D printed helmets, primed and sanded to a mirror finish with Arduino intergration"
@@ -111,7 +111,7 @@ function App() {
                 imageUrl={planets}
                 title="Model of the Heavens"
                 description="Understanding and combining mechanisms to create a complex, moving model of the solar system"
-                buttonText="Coming Soon"/>
+                link="/projects/model-of-the-heavens"/>
               <ProjectCard
                 imageUrl={diffswerve}
                 title="Differential Swerve"

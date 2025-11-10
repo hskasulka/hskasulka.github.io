@@ -1,0 +1,63 @@
+.back-to-top-container {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+  z-index: 1000;
+}
+
+.back-to-top-container.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* circular button */
+.back-to-top-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+/* icon styling */
+.back-to-top-icon {
+  font-size: 22px;
+  color: var(--ant-color-text, #333333);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* hover effects */
+.back-to-top-container:hover .back-to-top-button {
+  background-color: var(--ant-color-primary, #1677ff);
+}
+
+.back-to-top-container:hover .back-to-top-icon {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* "Back to Top" label */
+.back-to-top-label {
+  font-size: 0.9rem;
+  color: var(--ant-color-text, #333333);
+  margin-top: 8px;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.back-to-top-label.show {
+  opacity: 1;
+  transform: translateY(0);
+}

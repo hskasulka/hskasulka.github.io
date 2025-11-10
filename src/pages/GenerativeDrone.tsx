@@ -3,6 +3,7 @@ import { Typography, Image } from 'antd';
 import ContentBlock from '@layouts/ContentBlock';
 import TitleCard from '@layouts/TitleCard';
 import LinkItem from '@components/LinkItem';
+import BackToTop from '@components/BackToTop';
 
 import '@styles/ProjectPage.css';
 import {faFilePdf} from '@fortawesome/free-solid-svg-icons';
@@ -13,7 +14,6 @@ import gdd2 from '@assets/gdd/gdd-2.png';
 import gdd3 from '@assets/gdd/gdd-3.png';
 import gdd4 from '@assets/gdd/gdd-4.png';
 import gdd5 from '@assets/gdd/gdd-5.png';
-import { Link } from 'react-router-dom';
 
 const { Paragraph } = Typography;
 
@@ -127,6 +127,7 @@ const GenerativeDrone: React.FC = () => {
             label="Project 4"
           />
       </div>
+      <BackToTop/>
     </>
   );
 };

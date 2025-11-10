@@ -3,6 +3,7 @@ import { Typography, Image } from 'antd';
 import ContentBlock from '@layouts/ContentBlock';
 import TitleCard from '@layouts/TitleCard';
 import LinkItem from '@components/LinkItem';
+import BackToTop from '@components/BackToTop';
 
 import '@styles/ProjectPage.css';
 import {faFilePdf} from '@fortawesome/free-solid-svg-icons';
@@ -224,6 +225,7 @@ const CampGrill: React.FC = () => {
             label="Final Presentation"
           />
       </div>
+      <BackToTop/>
     </>
   );
 };
