@@ -31,7 +31,7 @@ function App() {
   return (
     <>
       <HeroSection/>
-      <ContentBlock
+      <ContentBlock align="top"
         verticalMargin={60}
         horizontalMargin={100}
         padding={32}>
@@ -116,7 +116,7 @@ function App() {
                 imageUrl={diffswerve}
                 title="Differential Swerve"
                 description="Making custom differentials to create slipless, strafing movement for robotics"
-                buttonText="Coming Soon"/>
+                link="/projects/differential-swerve"/>
         </div>
       </>
         

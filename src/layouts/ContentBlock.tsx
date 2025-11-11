@@ -4,9 +4,10 @@ import '../styles/ContentBlock.css';
 
 interface ContentBlockProps {
   children: React.ReactNode[];
-  verticalMargin?: number; // px
-  horizontalMargin?: number; // px
-  padding?: number; // px between columns
+  verticalMargin?: number;
+  horizontalMargin?: number;
+  padding?: number;
+  align?: 'center' | 'top'; // 👈 new prop
 }
 
 const ContentBlock: React.FC<ContentBlockProps> = ({
@@ -14,22 +15,18 @@ const ContentBlock: React.FC<ContentBlockProps> = ({
   verticalMargin = 40,
   horizontalMargin = 0,
   padding = 24,
+  align = 'center',
 }) => {
   const span = Math.floor(24 / children.length);
 
   return (
     <div
-      className="content-block-container"
+      className={`content-block-container ${align === 'top' ? 'align-top' : ''}`}
       style={{
         padding: `${verticalMargin}px ${horizontalMargin}px`,
       }}
     >
-      <Row
-        gutter={padding}
-        justify="center"
-        align="top"
-        wrap
-      >
+      <Row gutter={padding} justify="center" align={align === 'top' ? 'top' : 'middle'} wrap>
         {children.map((child, index) => (
           <Col key={index} span={span}>
             <div className="content-block-column">{child}</div>
@@ -39,5 +36,6 @@ const ContentBlock: React.FC<ContentBlockProps> = ({
     </div>
   );
 };
+
 
 export default ContentBlock;

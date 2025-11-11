@@ -19,3 +19,7 @@
 .content-block-column > * {
   width: 100%;
 }
+
+.content-block-container.align-top .ant-row {
+  align-items: flex-start !important;
+}

@@ -13,6 +13,7 @@ import MicrofluidicNozzles from '@pages/MicrofluidicNozzles';
 import GenerativeDrone from '@pages/GenerativeDrone';
 import CampGrill from '@pages/CampGrill';
 import ModelOfTheHeavens from '@pages/ModelOfTheHeavens';
+import DifferentialSwerve from '@pages/DifferentialSwerve';
 
 
 
@@ -27,6 +28,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <Route path="/projects/generative-design-drone" element={<GenerativeDrone/>}/>
           <Route path="/projects/camp-grill" element={<CampGrill/>}/>
           <Route path="/projects/model-of-the-heavens" element={<ModelOfTheHeavens/>}/>
+          <Route path="/projects/differential-swerve" element={<DifferentialSwerve/>}/>
         </Routes>
       </Router>
     </ConfigProvider>
